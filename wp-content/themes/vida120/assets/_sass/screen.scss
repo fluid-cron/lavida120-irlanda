@@ -1,0 +1,562 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "../css/fonts.css";
+
+body {
+	width:100%;
+	background:#FFF;
+	font-family: "Trajan" !important;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	transition: .3s linear;
+}
+a:focus {
+	outline: none;
+}
+li {
+	float: left;
+}
+@mixin img {
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;
+	overflow: hidden;
+}
+$rojo: #BA0B36;
+
+.bg-rojo-header {
+	padding: 5px 0;
+	background: #BA0B36;
+	ul {
+		float: right;
+		li {
+			margin: 0 5px;
+			a > i {
+				width: 35px;
+				height: 35px;
+				display: inline-block;
+				line-height: 35px;
+				border: 2px solid $rojo;
+				border-radius: 50%;
+				text-align: center;
+				color: #FFF;
+				font-size: 1.5em;
+			}
+			a:hover > i {
+				border: 2px solid #FFF;
+				transition: .5s linear;
+			}
+		}
+	}
+}
+.bg-gris-header,
+.bg-gris-footer {
+	padding: 10px 0;
+	background: #F5F5F5;
+}
+.logo-header > img,
+.logo-120-moments > img {
+	display: block;
+	margin: auto;
+}
+nav {
+	ul {
+		float: right;
+		li {
+			padding: 0 30px;
+			a {
+				line-height: 3.5;
+				font-size: .875em;
+				font-weight: bold;
+				color: #6C6D6F;
+			}
+			a:hover {
+				color: $rojo;
+			}
+		}
+		li:last-child {
+			padding-right: 15px;
+		}
+	}
+}
+.videos img,
+.recetas img,
+.videos-120-moments img,
+.banner img {
+	@include img;
+}
+#swipebox-overlay {
+	background: rgba(0,0,0,.7) !important;
+}
+a.swipebox {
+	display: block;
+	position: relative;
+}
+.videos,
+.videos-120-moments {
+	a {
+		.play {
+			width: 300px;
+			height: 300px;
+			display: block;
+			margin: auto;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 999;
+			opacity: .5;
+		}
+	}
+	a:hover.swipebox {
+		img {
+			filter: grayscale(0);
+			transition: .3s linear;
+		}
+		.play {
+			opacity: 1;
+			transition: .3s linear;
+		}
+	}
+}
+.bg-gris {
+	padding: 10px 0;
+	background: #F5F5F5;
+	.logo-120-recipes > img {
+		float: left;
+		padding-left: 15px;
+	}
+}
+.recetas {
+	height: 767px;
+	overflow-y: scroll;
+}
+.relativo {
+	position: relative;
+	.hover-receta {
+		width: auto;
+		display: flex;
+		margin: 5px;
+		padding: 5px;
+		background: url('../images/bg-mas.png') no-repeat;
+		background-position: top right;
+		border: 3px solid #FFF;
+		box-sizing: border-box;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		align-items: flex-end;
+		z-index: 5;
+		opacity: 0;
+		color: #FFF;
+	}
+	img {
+		position: relative;
+	}
+	:hover {
+		opacity: 1;
+		transition: .3s ease-in;
+	}
+}
+#our-wines {
+	height: 830px;
+	display: flex;
+	.titulo-our-wines {
+		width: 100%;
+		padding: 15px !important;
+		position: absolute;
+		z-index: 9999;
+		font-size: 1.875em;
+	}
+	.bg-our-wines {
+		background: url('../images/bg-our-wines.png') no-repeat;
+		background-size: 100% 100%;
+	}
+	.info-vino {
+		float: right;
+		margin-top: 100px;
+		text-transform: uppercase;
+		h3 {
+			font-size: 1.875em;
+			font-weight: bold;
+		}
+		h4 {
+			margin: 30px auto;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+		p {
+			width: 90%;
+			line-height: 1.3;
+			font-size: 0.875em;
+		}
+	}
+}
+.vino-relativo {
+	height: 100%;
+	position: relative;
+	img {
+		position: absolute;
+		bottom: 12%;
+		left: 123px;
+	}
+}
+#moments {
+	display: flex;
+}
+.texto-120-moments {
+	padding: 15px 30px;
+	background: #F5F5F5;
+	text-align: center;
+	text-transform: uppercase;
+	color: #000;
+}
+.info {
+	display: block;
+	background: url('../images/info.png') center no-repeat;
+	background-size: cover;
+	background-position: 50% 2%;
+	position: relative;
+	a.btn-info {
+		width: 300px;
+		display: block;
+		margin: auto;
+		padding: 30px 50px;
+		position: absolute;
+		top: 70%;
+		right: 0;
+		left: 0;
+		z-index: 999;
+		border: 3px solid #FFF;
+		border-radius: 7px;
+		text-align: center;
+		font-size: 1.25em;
+		color: #FFF;
+	}
+	a:hover.btn-info {
+		background: $rojo;
+	}
+}
+.tabs {
+	margin-bottom: 50px;
+	ul {
+		li {
+			width: 33%;
+			border-bottom: 2px solid #BA0B36;
+			box-sizing: border-box;
+			text-align: center;
+			font-size: 1.125em;
+			a {
+				height: 30px;
+				display: block;
+				padding: 15px 0;
+				color: #000;
+			}
+		}
+	}
+}
+.ui-state-active {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border: 2px solid #BA0B36;
+	border-bottom: none !important;
+}
+.ui-state-focus:focus {
+	outline: none;
+}
+.bg-rojo-evento {
+	height: 450px;
+	margin: 0 70px;
+	padding: 50px 15px;
+	background: $rojo;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	text-transform: uppercase;
+	color: #FFF;
+	.caja-fecha {
+		width: 150px;
+		height: 150px;
+		display: block;
+		margin: auto;
+		padding-top: 50px;
+		line-height: 1;
+		position: relative;
+		background: #FFF;
+		border-radius: 50%;
+		box-sizing: border-box;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1.25em;
+		color: $rojo;
+	}
+	h3 {
+		height: 70px;
+		margin: 15px 0;
+		font-size: 1.25em;
+		font-weight: bold;
+		span.linea-titulo {
+			display: inline-block;
+			padding-bottom: 5px;
+			position: relative;
+		}
+		span.linea-titulo:before {
+			width: 15%;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			border-bottom: 3px solid #FFF;
+			content: '';
+		}
+	}
+	p {
+		font-size: .875em;
+	}
+}
+.bg-eventos {
+	padding: 50px 0;
+	h3 {
+		margin-bottom: 30px;
+		text-align: center;
+		font-size: 1.875em;
+	}
+}
+.bg-rojo-evento {
+	h3 {
+		text-align: left;
+	}
+}
+.logo-footer > img {
+	float: right;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+	nav ul li {
+		padding: 0 10px;
+	}
+	.videos a .play,
+	.videos-120-moments a .play {
+		width: 200px;
+		height: 200px;
+	}
+	.recetas {
+		height: 637px;
+	}
+	#our-wines {
+		height: 700px;
+		.info-vino {
+			h3 {
+				font-size: 1.5em;
+			}
+			h4 {
+				margin: 10px auto;
+			}
+			p {
+				width: 85%;
+				font-size: .75em;
+			}
+		}
+	}
+	.vino-relativo {
+		img {
+			bottom: 11%;
+			left: 104px;
+		}
+	}
+	.bg-rojo-evento {
+		h3 {
+			height: 70px;
+			font-size: 1.5em;
+		}
+	}
+	.bg-rojo-evento:nth-child(2) {
+		margin: 0 50px;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	nav ul li {
+		padding: 0 3px;
+	}
+	.videos a .play,
+	.videos-120-moments a .play {
+		width: 150px;
+		height: 150px;
+	}
+	.recetas {
+		height: 637px;
+	}
+	.texto-120-moments {
+		font-size: .875em;
+	}
+	#our-wines {
+		height: 700px;
+		.info-vino {
+			h3 {
+				font-size: 1.5em;
+			}
+			h4 {
+				margin: 10px auto;
+			}
+			p {
+				width: 100%;
+				font-size: .75em;
+			}
+		}
+		.swiper-button-prev.swiper-button-white,
+		.swiper-button-next.swiper-button-white {
+			display: none;
+		}
+	}
+	.vino-relativo {
+		img {
+			bottom: 11%;
+			left: 50px;
+		}
+	}
+	.info a.btn-info {
+		width: 200px;
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.sidenav {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 9999;
+		top: 0;
+		right: 0;
+		background-color: rgba(0,0,0,.9);
+		overflow-x: hidden;
+		transition: 0.3s;
+		padding-top: 60px;
+		text-align:left;
+	}
+	.sidenav a {
+		padding: 15px 0 15px 30px;
+		text-decoration: none;
+		font-size: .8125em;
+		color: #FFF;
+		display: block;
+		transition: 0.3s;
+		border-left: 3px solid #333;
+	}
+	.sidenav a:hover{
+		color: $rojo;
+		border-left: 3px solid $rojo;
+	}
+	.sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+	}
+	.menu-mobile {
+		font-size: 1.875em;
+		float: right;
+		color: #FFF;
+		padding: 13px 5px;
+		position: absolute;
+		left: 0;
+	}
+	.videos a .play,
+	.videos-120-moments a .play {
+		width: 50px;
+		height: 50px;
+	}
+	.texto-120-moments {
+		font-size: .75em;
+	}
+	.recetas {
+		height: inherit;
+		overflow-y: hidden;
+	}
+	#our-wines {
+		height: auto;
+		.bg-our-wines {
+			background: #FFF;
+		}
+		.info-vino {
+			margin: 70px 0;
+			h3 {
+				font-size: 1em;
+			}
+			h4 {
+				margin: 10px auto;
+				font-size: .75em;
+			}
+			p {
+				width: 100%;
+				font-size: .625em;
+			}
+		}
+		.swiper-button-prev.swiper-button-white,
+		.swiper-button-next.swiper-button-white {
+			display: none;
+		}
+	}
+	.swiper-button-prev.swiper-button-white,
+	.swiper-button-next.swiper-button-white {
+		width: 30px !important;
+		height: 30px !important;
+		background-size: 5px !important;
+	}
+	.vino-relativo {
+		position: inherit;
+		img {
+			width: 35%;
+			top: 70px;
+			bottom: 3%;
+			left: 30px;
+		}
+	}
+	#moments {
+		display: inherit;
+	}
+	.info {
+		height: 500px;
+		display: inherit;
+		background-position: top;
+		a.btn-info {
+			width: 150px;
+			padding: 10px;
+			border: 1px solid #FFF;
+			font-size: .75em;
+		}
+	}
+	.tabs > ul > li > a {
+		height: 50px;
+		padding: 10px 5px;
+		font-size: .75em;
+	}
+	.bg-eventos {
+		.swiper-button-prev.swiper-button-white,
+		.swiper-button-next.swiper-button-white {
+			display: none;
+		}
+	}
+	.bg-rojo-evento {
+		height: inherit;
+		margin: 30px 0;
+	}
+	.bg-rojo-evento:first-child {
+		margin-top: 0;
+	}
+}
+
+.swiper-container-videos-home {
+	overflow: hidden;
+	position: relative;
+}
+
+

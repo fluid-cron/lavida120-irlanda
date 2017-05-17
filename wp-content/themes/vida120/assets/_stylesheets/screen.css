@@ -1,0 +1,755 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(../css/fonts.css);
+/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 9, ../sass/screen.scss */
+body {
+  width: 100%;
+  background: #FFF;
+  font-family: "Trajan" !important;
+}
+
+/* line 14, ../sass/screen.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 17, ../sass/screen.scss */
+a:hover {
+  transition: .3s linear;
+}
+
+/* line 20, ../sass/screen.scss */
+a:focus {
+  outline: none;
+}
+
+/* line 23, ../sass/screen.scss */
+li {
+  float: left;
+}
+
+/* line 34, ../sass/screen.scss */
+.bg-rojo-header {
+  padding: 5px 0;
+  background: #BA0B36;
+}
+/* line 37, ../sass/screen.scss */
+.bg-rojo-header ul {
+  float: right;
+}
+/* line 39, ../sass/screen.scss */
+.bg-rojo-header ul li {
+  margin: 0 5px;
+}
+/* line 41, ../sass/screen.scss */
+.bg-rojo-header ul li a > i {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  line-height: 35px;
+  border: 2px solid #BA0B36;
+  border-radius: 50%;
+  text-align: center;
+  color: #FFF;
+  font-size: 1.5em;
+}
+/* line 52, ../sass/screen.scss */
+.bg-rojo-header ul li a:hover > i {
+  border: 2px solid #FFF;
+  transition: .5s linear;
+}
+
+/* line 59, ../sass/screen.scss */
+.bg-gris-header,
+.bg-gris-footer {
+  padding: 10px 0;
+  background: #F5F5F5;
+}
+
+/* line 64, ../sass/screen.scss */
+.logo-header > img,
+.logo-120-moments > img {
+  display: block;
+  margin: auto;
+}
+
+/* line 70, ../sass/screen.scss */
+nav ul {
+  float: right;
+}
+/* line 72, ../sass/screen.scss */
+nav ul li {
+  padding: 0 30px;
+}
+/* line 74, ../sass/screen.scss */
+nav ul li a {
+  line-height: 3.5;
+  font-size: .875em;
+  font-weight: bold;
+  color: #6C6D6F;
+}
+/* line 80, ../sass/screen.scss */
+nav ul li a:hover {
+  color: #BA0B36;
+}
+/* line 84, ../sass/screen.scss */
+nav ul li:last-child {
+  padding-right: 15px;
+}
+
+/* line 89, ../sass/screen.scss */
+.videos img,
+.recetas img,
+.videos-120-moments img,
+.banner img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  overflow: hidden;
+}
+
+/* line 95, ../sass/screen.scss */
+#swipebox-overlay {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* line 98, ../sass/screen.scss */
+a.swipebox {
+  display: block;
+  position: relative;
+}
+
+/* line 105, ../sass/screen.scss */
+.videos a .play,
+.videos-120-moments a .play {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: .5;
+}
+/* line 120, ../sass/screen.scss */
+.videos a:hover.swipebox img,
+.videos-120-moments a:hover.swipebox img {
+  filter: grayscale(0);
+  transition: .3s linear;
+}
+/* line 124, ../sass/screen.scss */
+.videos a:hover.swipebox .play,
+.videos-120-moments a:hover.swipebox .play {
+  opacity: 1;
+  transition: .3s linear;
+}
+
+/* line 130, ../sass/screen.scss */
+.bg-gris {
+  padding: 10px 0;
+  background: #F5F5F5;
+}
+/* line 133, ../sass/screen.scss */
+.bg-gris .logo-120-recipes > img {
+  float: left;
+  padding-left: 15px;
+}
+
+/* line 138, ../sass/screen.scss */
+.recetas {
+  height: 767px;
+  overflow-y: scroll;
+}
+
+/* line 142, ../sass/screen.scss */
+.relativo {
+  position: relative;
+}
+/* line 144, ../sass/screen.scss */
+.relativo .hover-receta {
+  width: auto;
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  background: url("../images/bg-mas.png") no-repeat;
+  background-position: top right;
+  border: 3px solid #FFF;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: flex-end;
+  z-index: 5;
+  opacity: 0;
+  color: #FFF;
+}
+/* line 163, ../sass/screen.scss */
+.relativo img {
+  position: relative;
+}
+/* line 166, ../sass/screen.scss */
+.relativo :hover {
+  opacity: 1;
+  transition: .3s ease-in;
+}
+
+/* line 171, ../sass/screen.scss */
+#our-wines {
+  height: 830px;
+  display: flex;
+}
+/* line 174, ../sass/screen.scss */
+#our-wines .titulo-our-wines {
+  width: 100%;
+  padding: 15px !important;
+  position: absolute;
+  z-index: 9999;
+  font-size: 1.875em;
+}
+/* line 181, ../sass/screen.scss */
+#our-wines .bg-our-wines {
+  background: url("../images/bg-our-wines.png") no-repeat;
+  background-size: 100% 100%;
+}
+/* line 185, ../sass/screen.scss */
+#our-wines .info-vino {
+  float: right;
+  margin-top: 100px;
+  text-transform: uppercase;
+}
+/* line 189, ../sass/screen.scss */
+#our-wines .info-vino h3 {
+  font-size: 1.875em;
+  font-weight: bold;
+}
+/* line 193, ../sass/screen.scss */
+#our-wines .info-vino h4 {
+  margin: 30px auto;
+  text-decoration: underline;
+  font-weight: bold;
+}
+/* line 198, ../sass/screen.scss */
+#our-wines .info-vino p {
+  width: 90%;
+  line-height: 1.3;
+  font-size: 0.875em;
+}
+
+/* line 205, ../sass/screen.scss */
+.vino-relativo {
+  height: 100%;
+  position: relative;
+}
+/* line 208, ../sass/screen.scss */
+.vino-relativo img {
+  position: absolute;
+  bottom: 12%;
+  left: 123px;
+}
+
+/* line 214, ../sass/screen.scss */
+#moments {
+  display: flex;
+}
+
+/* line 217, ../sass/screen.scss */
+.texto-120-moments {
+  padding: 15px 30px;
+  background: #F5F5F5;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+}
+
+/* line 224, ../sass/screen.scss */
+.info {
+  display: block;
+  background: url("../images/info.png") center no-repeat;
+  background-size: cover;
+  background-position: 50% 2%;
+  position: relative;
+}
+/* line 230, ../sass/screen.scss */
+.info a.btn-info {
+  width: 300px;
+  display: block;
+  margin: auto;
+  padding: 30px 50px;
+  position: absolute;
+  top: 70%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  border: 3px solid #FFF;
+  border-radius: 7px;
+  text-align: center;
+  font-size: 1.25em;
+  color: #FFF;
+}
+/* line 246, ../sass/screen.scss */
+.info a:hover.btn-info {
+  background: #BA0B36;
+}
+
+/* line 250, ../sass/screen.scss */
+.tabs {
+  margin-bottom: 50px;
+}
+/* line 253, ../sass/screen.scss */
+.tabs ul li {
+  width: 33%;
+  border-bottom: 2px solid #BA0B36;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.125em;
+}
+/* line 259, ../sass/screen.scss */
+.tabs ul li a {
+  height: 30px;
+  display: block;
+  padding: 15px 0;
+  color: #000;
+}
+
+/* line 268, ../sass/screen.scss */
+.ui-state-active {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 2px solid #BA0B36;
+  border-bottom: none !important;
+}
+
+/* line 274, ../sass/screen.scss */
+.ui-state-focus:focus {
+  outline: none;
+}
+
+/* line 277, ../sass/screen.scss */
+.bg-rojo-evento {
+  height: 450px;
+  margin: 0 70px;
+  padding: 50px 15px;
+  background: #BA0B36;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-transform: uppercase;
+  color: #FFF;
+}
+/* line 288, ../sass/screen.scss */
+.bg-rojo-evento .caja-fecha {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: auto;
+  padding-top: 50px;
+  line-height: 1;
+  position: relative;
+  background: #FFF;
+  border-radius: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  color: #BA0B36;
+}
+/* line 304, ../sass/screen.scss */
+.bg-rojo-evento h3 {
+  height: 70px;
+  margin: 15px 0;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+/* line 309, ../sass/screen.scss */
+.bg-rojo-evento h3 span.linea-titulo {
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+}
+/* line 314, ../sass/screen.scss */
+.bg-rojo-evento h3 span.linea-titulo:before {
+  width: 15%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-bottom: 3px solid #FFF;
+  content: '';
+}
+/* line 323, ../sass/screen.scss */
+.bg-rojo-evento p {
+  font-size: .875em;
+}
+
+/* line 327, ../sass/screen.scss */
+.bg-eventos {
+  padding: 50px 0;
+}
+/* line 329, ../sass/screen.scss */
+.bg-eventos h3 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.875em;
+}
+
+/* line 336, ../sass/screen.scss */
+.bg-rojo-evento h3 {
+  text-align: left;
+}
+
+/* line 340, ../sass/screen.scss */
+.logo-footer > img {
+  float: right;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* line 345, ../sass/screen.scss */
+  nav ul li {
+    padding: 0 10px;
+  }
+
+  /* line 348, ../sass/screen.scss */
+  .videos a .play,
+  .videos-120-moments a .play {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* line 353, ../sass/screen.scss */
+  .recetas {
+    height: 637px;
+  }
+
+  /* line 356, ../sass/screen.scss */
+  #our-wines {
+    height: 700px;
+  }
+  /* line 359, ../sass/screen.scss */
+  #our-wines .info-vino h3 {
+    font-size: 1.5em;
+  }
+  /* line 362, ../sass/screen.scss */
+  #our-wines .info-vino h4 {
+    margin: 10px auto;
+  }
+  /* line 365, ../sass/screen.scss */
+  #our-wines .info-vino p {
+    width: 85%;
+    font-size: .75em;
+  }
+
+  /* line 372, ../sass/screen.scss */
+  .vino-relativo img {
+    bottom: 11%;
+    left: 104px;
+  }
+
+  /* line 378, ../sass/screen.scss */
+  .bg-rojo-evento h3 {
+    height: 70px;
+    font-size: 1.5em;
+  }
+
+  /* line 383, ../sass/screen.scss */
+  .bg-rojo-evento:nth-child(2) {
+    margin: 0 50px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* line 388, ../sass/screen.scss */
+  nav ul li {
+    padding: 0 3px;
+  }
+
+  /* line 391, ../sass/screen.scss */
+  .videos a .play,
+  .videos-120-moments a .play {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* line 396, ../sass/screen.scss */
+  .recetas {
+    height: 637px;
+  }
+
+  /* line 399, ../sass/screen.scss */
+  .texto-120-moments {
+    font-size: .875em;
+  }
+
+  /* line 402, ../sass/screen.scss */
+  #our-wines {
+    height: 700px;
+  }
+  /* line 405, ../sass/screen.scss */
+  #our-wines .info-vino h3 {
+    font-size: 1.5em;
+  }
+  /* line 408, ../sass/screen.scss */
+  #our-wines .info-vino h4 {
+    margin: 10px auto;
+  }
+  /* line 411, ../sass/screen.scss */
+  #our-wines .info-vino p {
+    width: 100%;
+    font-size: .75em;
+  }
+  /* line 416, ../sass/screen.scss */
+  #our-wines .swiper-button-prev.swiper-button-white,
+  #our-wines .swiper-button-next.swiper-button-white {
+    display: none;
+  }
+
+  /* line 422, ../sass/screen.scss */
+  .vino-relativo img {
+    bottom: 11%;
+    left: 50px;
+  }
+
+  /* line 427, ../sass/screen.scss */
+  .info a.btn-info {
+    width: 200px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  /* line 432, ../sass/screen.scss */
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    text-align: left;
+  }
+
+  /* line 445, ../sass/screen.scss */
+  .sidenav a {
+    padding: 15px 0 15px 30px;
+    text-decoration: none;
+    font-size: .8125em;
+    color: #FFF;
+    display: block;
+    transition: 0.3s;
+    border-left: 3px solid #333;
+  }
+
+  /* line 454, ../sass/screen.scss */
+  .sidenav a:hover {
+    color: #BA0B36;
+    border-left: 3px solid #BA0B36;
+  }
+
+  /* line 458, ../sass/screen.scss */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+
+  /* line 464, ../sass/screen.scss */
+  .menu-mobile {
+    font-size: 1.875em;
+    float: right;
+    color: #FFF;
+    padding: 13px 5px;
+    position: absolute;
+    left: 0;
+  }
+
+  /* line 472, ../sass/screen.scss */
+  .videos a .play,
+  .videos-120-moments a .play {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* line 477, ../sass/screen.scss */
+  .texto-120-moments {
+    font-size: .75em;
+  }
+
+  /* line 480, ../sass/screen.scss */
+  .recetas {
+    height: inherit;
+    overflow-y: hidden;
+  }
+
+  /* line 484, ../sass/screen.scss */
+  #our-wines {
+    height: auto;
+  }
+  /* line 486, ../sass/screen.scss */
+  #our-wines .bg-our-wines {
+    background: #FFF;
+  }
+  /* line 489, ../sass/screen.scss */
+  #our-wines .info-vino {
+    margin: 70px 0;
+  }
+  /* line 491, ../sass/screen.scss */
+  #our-wines .info-vino h3 {
+    font-size: 1em;
+  }
+  /* line 494, ../sass/screen.scss */
+  #our-wines .info-vino h4 {
+    margin: 10px auto;
+    font-size: .75em;
+  }
+  /* line 498, ../sass/screen.scss */
+  #our-wines .info-vino p {
+    width: 100%;
+    font-size: .625em;
+  }
+  /* line 503, ../sass/screen.scss */
+  #our-wines .swiper-button-prev.swiper-button-white,
+  #our-wines .swiper-button-next.swiper-button-white {
+    display: none;
+  }
+
+  /* line 508, ../sass/screen.scss */
+  .swiper-button-prev.swiper-button-white,
+  .swiper-button-next.swiper-button-white {
+    width: 30px !important;
+    height: 30px !important;
+    background-size: 5px !important;
+  }
+
+  /* line 514, ../sass/screen.scss */
+  .vino-relativo {
+    position: inherit;
+  }
+  /* line 516, ../sass/screen.scss */
+  .vino-relativo img {
+    width: 35%;
+    top: 70px;
+    bottom: 3%;
+    left: 30px;
+  }
+
+  /* line 523, ../sass/screen.scss */
+  #moments {
+    display: inherit;
+  }
+
+  /* line 526, ../sass/screen.scss */
+  .info {
+    height: 500px;
+    display: inherit;
+    background-position: top;
+  }
+  /* line 530, ../sass/screen.scss */
+  .info a.btn-info {
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #FFF;
+    font-size: .75em;
+  }
+
+  /* line 537, ../sass/screen.scss */
+  .tabs > ul > li > a {
+    height: 50px;
+    padding: 10px 5px;
+    font-size: .75em;
+  }
+
+  /* line 543, ../sass/screen.scss */
+  .bg-eventos .swiper-button-prev.swiper-button-white,
+  .bg-eventos .swiper-button-next.swiper-button-white {
+    display: none;
+  }
+
+  /* line 548, ../sass/screen.scss */
+  .bg-rojo-evento {
+    height: inherit;
+    margin: 30px 0;
+  }
+
+  /* line 552, ../sass/screen.scss */
+  .bg-rojo-evento:first-child {
+    margin-top: 0;
+  }
+}
+/* line 557, ../sass/screen.scss */
+.swiper-container-videos-home {
+  overflow: hidden;
+  position: relative;
+}
