@@ -10,7 +10,6 @@ body {
 	width:100%;
 	background:#FFF;
 	font-family: "Trajan" !important;
-	padding-top: 118px;
 }
 a {
 	text-decoration: none;
@@ -567,19 +566,8 @@ a.swipebox {
 	background-size: cover; 
 }
 
-.banner-home {
-	padding: 0;
-	img {
-		width:100%;
-		margin-bottom: -4px;
-	}
-}
 
-header {
-	position: fixed;
-    width: 100%;
-    z-index: 999;	
-    margin-top: -118px;
-}
+
+
 
 

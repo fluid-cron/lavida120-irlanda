@@ -1,5 +1,7 @@
 <?php get_header();?>
-
+  <section class="banner-home">
+    <?php if ( is_active_sidebar( 'banner-home' ) ) : dynamic_sidebar( 'banner-home' ); endif; ?>
+  </section>
   <section id="inicio" class="swiper-container swiper-container-videos-home" >
     <div class="grid-100 grid-parent videos swiper-wrapper">
       <?php
